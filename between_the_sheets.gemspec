@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["idwyjm@gmail.com"]
 
   spec.summary       = %q{A simple card game I used to play at the bar.}
-  spec.description   = %q{The player is shown 2 cards and then wagers if the next card will be between the first 2. }
+  spec.description   = %q{The player is shown 2 cards and then wagers if the next card will be between them. }
   spec.homepage      = "https://github.com/chris-roerig/between_the_sheets"
   spec.license       = "MIT"
 
