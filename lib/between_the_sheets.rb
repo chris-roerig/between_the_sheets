@@ -1,4 +1,3 @@
-require "pry"
 require "colorize"
 require_relative "between_the_sheets/application_exit"
 require_relative "between_the_sheets/application_help"
