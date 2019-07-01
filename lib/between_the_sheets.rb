@@ -9,17 +9,21 @@ require_relative "between_the_sheets/wager"
 require_relative "between_the_sheets/version"
 
 module BetweenTheSheets
+  running = true
+
   loop do
     begin
+      raise ApplicationExit unless running
+
       @game = Game.new(@jackpot || Game::STARTING_JACKPOT)
       @game.execute
     rescue GameOver
       @jackpot = @game.jackpot
       puts Game.message :game_over
-      next if Ask.print("Play again? ", match: /y|n/) == "y"
+      running = Ask.print("Play again? ", match: /y|n/) == "y"
     rescue ApplicationHelp
       puts Game.message :help
-    rescue ApplicationExit
+    rescue ApplicationExit, SystemExit, Interrupt
       puts Game.message :exit
       break
     rescue => e

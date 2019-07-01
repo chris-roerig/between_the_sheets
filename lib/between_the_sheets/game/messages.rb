@@ -2,8 +2,8 @@ module BetweenTheSheets
   class Game
     module Messages
       MESSAGES = {
-        error: "Sorry, there was an error.".colorize(:orange),
-        exit: "Good bye.",
+        error: "\nSorry, there was an error.".colorize(:orange),
+        exit: "\nGood bye.",
         game_over: "GAME OVER".colorize(:red),
         lose: "You LOSE!".colorize(:red),
         win: "You WIN!".colorize(:green),
